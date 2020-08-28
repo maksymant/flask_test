@@ -3,12 +3,12 @@ from flask import Flask, render_template, request, redirect
 app = Flask(__name__)
 
 
-def write_to_file(data):
-    with open('database.txt', mode='a') as db:
-        email = data['email']
-        subject = data['subject']
-        message = data['message']
-        file = db.write(f'Email: {email}\nSubject: {subject}\nMessage: {message}\n\n')
+# def write_to_file(data):
+#     with open('database.txt', mode='a') as db:
+#         email = data['email']
+#         subject = data['subject']
+#         message = data['message']
+#         file = db.write(f'Email: {email}\nSubject: {subject}\nMessage: {message}\n\n')
 
 def write_to_csv(data):
     with open('database.csv', mode='a', newline='') as db:
